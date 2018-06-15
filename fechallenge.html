@@ -2,110 +2,96 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Taylor's FE Challenge</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/fechallenge.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+<style>
+/* Always set the map height explicitly to define the size of the div
+     * element that contains the map. */
+    #map {
+      height: 30%;
+    }
+    /* Optional: Makes the sample page fill the window. */
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+</style>
   </head>
   <body>
-    <section class="container">
+    <div class="container">
       <nav>
         <div class="arrow-left">
-          <i class="fa fa-chevron-left fa-inverse fa-2x" aria-hidden="true"></i>
+          <i class="fas fa-angle-left"></i>
+            <h2>Washington & State</h2>
         </div>
       </nav>
-      <section class="restaurant-list">
+      <div id="map"></div>
+    <script>
+      var map;
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: 41.8831023, lng: -87.6310323},
+          zoom: 8
+        });
+      }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCqmPjQpbunoJiu6jrXFL4cEeXt6-kPTbs&callback=initMap"
+    async defer></script>
+      <section class="bus-list">
         <div class="location">
           <div class="content">
-            <h1>Bakalaki Greek Taverna</h1>
-            <h3>Seng Poh Road 3, Singapore</h3>
-          </div>
           <div class="bus">
             <i class="fas fa-bus" aria-hidden="true"></i>
           </div>
-        </div>
-        <div class="location">
-          <div class="content">
-            <h1>Entre-Nous Creperie</h1>
-            <h3>27 Seah Street #01-01, Singapore</h3>
-          </div>
-          <div class="arrow">
-            <i class="fa fa-chevron-right fa-2x" aria-hidden="true"></i>
+            <h1>4 - Cottage Grove</h1>
+            <h3>Outbound to Echo Park</h3>
+            <h3>3 min, 5 min, 7 min</h3>
           </div>
         </div>
         <div class="location">
           <div class="content">
-            <h1>Fratini La Trattoria</h1>
-            <h3>10 Greenwood Avenue, Singapore</h3>
+          <div class="bus">
+            <i class="fas fa-bus" aria-hidden="true"></i>
           </div>
-          <div class="arrow">
-            <i class="fa fa-chevron-right fa-2x" aria-hidden="true"></i>
-          </div>
-        </div>
-        <div class="location">
-          <div class="content">
-            <h1>Rhubarb</h1>
-            <h3>3 Duxton Hill, Singapore</h3>
-          </div>
-          <div class="arrow">
-            <i class="fa fa-chevron-right fa-2x" aria-hidden="true"></i>
+            <h1>8 - Halsted</h1>
+            <h3>Outbound to Echo Park</h3>
+            <h3>3 min, 10 min, 17 min</h3>
           </div>
         </div>
         <div class="location">
           <div class="content">
-            <h1>Colony</h1>
-            <h3>7 Raffles Avenue, The Ritz-Carlton, Singapore</h3>
+          <div class="bus">
+            <i class="fas fa-bus" aria-hidden="true"></i>
           </div>
-          <div class="arrow">
-            <i class="fa fa-chevron-right fa-2x" aria-hidden="true"></i>
-          </div>
-        </div>
-        <div class="location">
-          <div class="content">
-            <h1>Alma By Juan Amador</h1>
-            <h3>22 Scotts Road, Goodwood Park Hotel, Singapore</h3>
-          </div>
-          <div class="arrow">
-            <i class="fa fa-chevron-right fa-2x" aria-hidden="true"></i>
+            <h1>13 - Roosevelt</h1>
+            <h3>Outbound to Ember</h3>
+            <h3>7 min, 10 min, 14 min</h3>
           </div>
         </div>
         <div class="location">
           <div class="content">
-            <h1>Summer Pavilion</h1>
-            <h3>7 Raffles Avenue, The Ritz-Carlton, Singapore</h3>
+          <div class="bus">
+            <i class="fas fa-bus" aria-hidden="true"></i>
           </div>
-          <div class="arrow">
-            <i class="fa fa-chevron-right fa-2x" aria-hidden="true"></i>
-          </div>
-        </div>
-        <div class="location">
-          <div class="content">
-            <h1>My Awesome Cafe</h1>
-            <h3>Telok Ayer Street, Singapore</h3>
-          </div>
-          <div class="arrow">
-            <i class="fa fa-chevron-right fa-2x" aria-hidden="true"></i>
+            <h1>27 - South Shore Express</h1>
+            <h3>Outbound to South Shore</h3>
+            <h3>8 min, 12 min, 21 min</h3>
           </div>
         </div>
         <div class="location">
           <div class="content">
-            <h1>MTR Restaurant</h1>
-            <h3>438 Serangoon Road #438, Singapore</h3>
+          <div class="bus">
+            <i class="fas fa-bus" aria-hidden="true"></i>
           </div>
-          <div class="arrow">
-            <i class="fa fa-chevron-right fa-2x" aria-hidden="true"></i>
-          </div>
-        </div>
-        <div class="location">
-          <div class="content">
-            <h1>The Curry Culture</h1>
-            <h3>31 Cuppage Road Cuppage Terrace, Singapore</h3>
-          </div>
-          <div class="arrow">
-            <i class="fa fa-chevron-right fa-2x" aria-hidden="true"></i>
+            <h1>88 - Higgins</h1>
+            <h3>Outbound to Chinatown</h3>
+            <h3>10 min, 15 min, 20 min</h3>
           </div>
         </div>
       </section>
-    </section>
+    </div>
   </body>
 </html>
