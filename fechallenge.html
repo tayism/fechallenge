@@ -22,8 +22,8 @@
   </head>
   <body>
     <div class="container">
-      <nav>
-     <img id="appleNavBar" src="images/Apple-NavBar.png" alt="Nav Bar">
+    <nav>
+     <img id="appleNavBar" src="images/Status Bar/Apple-NavBar.png" alt="Nav Bar">
         <div class="arrow-left">
           <i class="fas fa-angle-left"></i>
             <h2>Washington & State</h2>
@@ -32,10 +32,11 @@
       <div id="map"></div>
     <script>
       function initMap() {
-        // Styles a map in night mode.
         var map = new google.maps.Map(document.getElementById('map'), {
-          center: {lat: 41.8831023, lng: -87.6310323},
-          zoom: 15,
+          center: {lat: 41.883201, lng: -87.6287301}, //41.883201,-87.6287301
+          zoom: 17,
+
+          // Styles a map in night mode.
           styles: [
             {elementType: 'geometry', stylers: [{color: '#242f3e'}]},
             {elementType: 'labels.text.stroke', stylers: [{color: '#242f3e'}]},
@@ -43,22 +44,31 @@
             {
               featureType: 'administrative.locality',
               elementType: 'labels.text.fill',
-              stylers: [{color: '#d59563'}]
+              stylers: [{visibility: 'off'}]
+            },
+            {
+              featureType: 'administrative.land_parcel',
+              elementType: 'labels',
+              stylers: [{visibility: 'off'}]
             },
             {
               featureType: 'poi',
               elementType: 'labels.text.fill',
-              stylers: [{color: '#d59563'}]
+              stylers: [{visibility: 'off'}]
             },
             {
               featureType: 'poi.park',
               elementType: 'geometry',
-              stylers: [{color: '#263c3f'}]
+              stylers: [{visibility: 'off'}]
+            },
+            {
+              featureType: 'poi.business',
+              stylers: [{visibility: 'off'}]
             },
             {
               featureType: 'poi.park',
               elementType: 'labels.text.fill',
-              stylers: [{color: '#6b9a76'}]
+              stylers: [{visibility: 'off'}]
             },
             {
               featureType: 'road',
@@ -118,61 +128,112 @@
           ]
         });
       }
+
+
     </script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCqmPjQpbunoJiu6jrXFL4cEeXt6-kPTbs&callback=initMap"
     async defer></script>
-      <section class="bus-list">
-        <div class="location">
-          <div class="content">
-          <div class="bus">
+
+      <ul>
+        <li class="location">
+          <ul class="bus">
+            <li><i class="fas fa-bus" aria-hidden="true"></i></li>
+          </ul>
+          <ul class"location">
+            <li><h1>60 - Randolph / Harbor Dr.</h1>
+            <h3>Eastbound</h3>
+            <h1>3 min, 23 min, 43 min</h1></li>
+          </ul>
+        </li>
+      </ul>
+
+      <ul>
+        <li class="location">
+          <ul class="bus">
             <i class="fas fa-bus" aria-hidden="true"></i>
-          </div>
-            <h1>4 - Cottage Grove</h1>
-            <h3>Outbound to Echo Park</h3>
-            <h3>3 min, 5 min, 7 min</h3>
-          </div>
-        </div>
-        <div class="location">
-          <div class="content">
-          <div class="bus">
+            <li><h1>124 - Navy Pier</h1></li>
+            <li><h3>Eastbound</h3></li>
+            <li><h1>3 min, 13 min, 23 min</h1></li>
+          </ul>
+        </li>
+      </ul>
+
+      <ul>
+        <li class="location">
+          <ul class="bus">
             <i class="fas fa-bus" aria-hidden="true"></i>
-          </div>
-            <h1>8 - Halsted</h1>
-            <h3>Outbound to Echo Park</h3>
-            <h3>3 min, 10 min, 17 min</h3>
-          </div>
-        </div>
-        <div class="location">
-          <div class="content">
-          <div class="bus">
+            <li><h1>151 - Devon / Clark</h1></li>
+            <li><h3>Northbound</h3></li>
+            <li><h1>7 min, 23 min, 39 min</h1></li>
+          </ul>
+        </li>
+      </ul>
+
+      <ul>
+        <li class="location">
+          <ul class="bus">
             <i class="fas fa-bus" aria-hidden="true"></i>
-          </div>
-            <h1>13 - Roosevelt</h1>
-            <h3>Outbound to Ember</h3>
-            <h3>7 min, 10 min, 14 min</h3>
-          </div>
-        </div>
-        <div class="location">
-          <div class="content">
-          <div class="bus">
+            <li><h1>J14 - 103rd / Stony Island</h1></li>
+            <li><h3>Southbound</h3></li>
+            <li><h1>8 min, 23 min, 38 min</h1></li>
+          </ul>
+        </li>
+      </ul>
+
+      <ul>
+        <li class="location">
+          <ul class="bus">
             <i class="fas fa-bus" aria-hidden="true"></i>
-          </div>
-            <h1>27 - South Shore Express</h1>
-            <h3>Outbound to South Shore</h3>
-            <h3>8 min, 12 min, 21 min</h3>
-          </div>
-        </div>
-        <div class="location">
-          <div class="content">
-          <div class="bus">
+            <li><h1>124 - Navy Pier</h1></li>
+            <li><h3>Southbound</h3></li>
+            <li><h1>10 min, 20 min, 30 min</h1></li>
+          </ul>
+        </li>
+      </ul>
+
+      <ul>
+        <li class="location">
+          <ul class="bus">
             <i class="fas fa-bus" aria-hidden="true"></i>
-          </div>
-            <h1>88 - Higgins</h1>
-            <h3>Outbound to Chinatown</h3>
-            <h3>10 min, 15 min, 20 min</h3>
-          </div>
-        </div>
-      </section>
-    </div>
+            <li><h1>6x - Jackson Park Express</h1></li>
+            <li><h3 class="reroute">Re-route</h3></li>
+            <li><h1>n/a</h1></li>
+          </ul>
+        </li>
+      </ul>
+
+      <ul>
+        <li class="location">
+          <ul class="bus">
+            <i class="fas fa-bus" aria-hidden="true"></i>
+            <li><h1>4 - Cottage Grove</h1></li>
+            <li><h3 class="OOS">Out of service</h3></li>
+            <li><h1>Resumes: 12:10am</h1></li>
+          </ul>
+        </li>
+      </ul>
+
+      <ul>
+        <li class="location">
+          <ul class="bus">
+            <i class="fas fa-bus" aria-hidden="true"></i>
+            <li><h1>20 - Madison</h1></li>
+            <li><h3 class="OOS">Out of service</h3></li>
+            <li><h1>Resumes: 12:10am</h1></li>
+          </ul>
+        </li>
+      </ul>
+
+      <ul>
+        <li class="location">
+          <ul class="bus">
+            <i class="fas fa-bus" aria-hidden="true"></i>
+            <li><h1>157 - Streeterville / Taylor</h1></li>
+            <li><h3 class="OOS">Out of service</h3></li>
+            <li><h1>Resumes: 6:00am</h1></li>
+          </ul>
+        </li>
+      </ul>
+
   </body>
 </html>
