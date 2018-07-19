@@ -4,7 +4,7 @@
 
 body {
   background-color: #333;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 html {
@@ -37,7 +37,7 @@ map {
 .bus {
   float: left;
   font-size: 3.2rem;
-  margin-top: 20%;
+  margin-top: 15%;
   margin-left: 5%;
   width: 20%;
 }
@@ -86,12 +86,20 @@ ul li ul li {
   width: 70%;
 }
 
-h1, h3 {
+h1 {
   font-size: 2rem;
   display: inline-block;
   width: 100%;
+  font-weight: 300;
 }
 
+h3 {
+  font-size: 2rem;
+  display: inline-block;
+  width: 100%;
+  font-variant: small-caps;
+  letter-spacing: .10em;
+}
 
 /*Map Styling*/
 
@@ -103,4 +111,21 @@ h1, h3 {
 }
 #GMapsID div div a div img{
     display:none;
+}
+
+@import "compass/css3";
+
+/* Capsule structure  */
+
+.capsule {
+  height: 15px;
+  width: 50px;
+  margin: 0 auto;
+  background: transparent;
+  border-radius: 80px ;
+  border: 2px solid grey;
+}
+
+.capsule-bar {
+  background-color: #f9f9f9;
 }
