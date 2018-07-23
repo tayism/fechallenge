@@ -6,30 +6,7 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/fechallenge.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
-<style>
-/* Always set the map height explicitly to define the size of the div
-     * element that contains the map. */
-    #map {
-      height: 30%;
-    }
-    /* Optional: Makes the sample page fill the window. */
-    html, body {
-      height: 100%;
-      margin: 0;
-      padding: 0;
-    }
-</style>
-  </head>
-  <body>
-    <div class="container">
-    <nav>
-     <img id="appleNavBar" src="images/Status Bar/Apple-NavBar.png" alt="Nav Bar">
-        <div class="arrow-left">
-          <i class="fas fa-angle-left"></i>
-            <h2>Washington & State</h2>
-        </div>
-      </nav>
-      <div id="map"></div>
+
     <script>
       function initMap() {
         var map = new google.maps.Map(document.getElementById('map'), {
@@ -133,6 +110,32 @@
     </script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCqmPjQpbunoJiu6jrXFL4cEeXt6-kPTbs&callback=initMap"
     async defer></script>
+
+<style>
+/* Always set the map height explicitly to define the size of the div
+     * element that contains the map. */
+    #map {
+      height: 30%;
+    }
+    /* Optional: Makes the sample page fill the window. */
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+</style>
+  </head>
+  <body>
+    <div class="container">
+    <nav>
+     <img id="appleNavBar" src="images/Status Bar/Apple-NavBar.png" alt="Nav Bar">
+        <div class="arrow-left">
+          <i class="fas fa-angle-left"></i>
+            <h2>Washington & State</h2>
+        </div>
+      </nav>
+      <div id="map"></div>
+
 
     <div class="capsule-bar">
     <div class="capsule">
