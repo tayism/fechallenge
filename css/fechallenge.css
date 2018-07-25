@@ -37,7 +37,7 @@ map {
 .bus {
   float: left;
   font-size: 3.2rem;
-  margin-top: 15%;
+  margin-top: 7%;
   margin-left: 5%;
   width: 20%;
 }
@@ -87,14 +87,14 @@ ul li ul li {
 }
 
 h1 {
-  font-size: 2rem;
+  font-size: 1.6rem;
   display: inline-block;
   width: 100%;
   font-weight: 400;
 }
 
 h3 {
-  font-size: 2.5em;
+  font-size: 2em;
   display: inline-block;
   width: 100%;
   font-variant: small-caps;
